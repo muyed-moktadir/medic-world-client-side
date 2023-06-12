@@ -1,15 +1,13 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
+import { CustomButton } from "../InfoCards/InfocardStyle";
 
 const ContactUs = () => {
   return (
     <div className="hero bg-base-200">
-      <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+      <div className="card flex-shrink-0 w-full max-w-sm my-10">
         <div className="card-body">
           <div className="form-control">
-            <label className="label">
-              <span className="label-text">Email</span>
-            </label>
             <input
               type="text"
               placeholder="email"
@@ -17,22 +15,17 @@ const ContactUs = () => {
             />
           </div>
           <div className="form-control">
-            <label className="label">
-              <span className="label-text">Password</span>
-            </label>
             <input
               type="text"
               placeholder="password"
               className="input input-bordered"
             />
-            <label className="label">
-              <a href="#" className="label-text-alt link link-hover">
-                Forgot password?
-              </a>
-            </label>
           </div>
-          <div className="form-control mt-6">
-            <button className="btn btn-primary">Login</button>
+          <div className="form-control">
+            <textarea className="textarea textarea-accent" placeholder="Bio"></textarea>
+          </div>
+          <div className="form-control w-[50%] mx-auto mt-3">
+            <CustomButton>Submit</CustomButton>
           </div>
         </div>
       </div>
