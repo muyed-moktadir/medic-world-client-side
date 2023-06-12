@@ -7,7 +7,7 @@ import { CustomButton, bgImage } from "../InfoCards/InfocardStyle";
 const Banner = () => {
 
   return (
-    <div className=" hero w-[95%] mx-auto py-14 bg-pink-100" style={bgImage}>
+    <div className=" hero w-[95%] mx-auto py-14 mt-5 bg-slate-200" style={bgImage}>
       <div className="hero-content flex-col lg:flex-row-reverse " >
         <img
           src={chair}

@@ -11,7 +11,7 @@ const InfoCard = ({ card}) => {
       <figure>
         <img src={icon} alt="Movie" />
       </figure>
-      <div className="card-body">
+      <div className="card-body flex items-center justify-start">
         <h2 className="card-title">{name}</h2>
         <p>{description}</p>
       </div>

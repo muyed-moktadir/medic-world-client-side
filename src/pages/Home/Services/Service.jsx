@@ -8,8 +8,8 @@ const Service = ({ service }) => {
   const { name,icon, description } = service;
 
   return (
-    <div className="card h-52 bg-base-100 shadow-xl">
-      <figure className="px-10 pt-20">
+    <div className="card bg-base-100 shadow-xl">
+      <figure className="">
         <img
           src={icon}
           alt="Shoes"
