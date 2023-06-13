@@ -6,7 +6,7 @@ import Testimonial from "./Testimonial";
 
 const Testimonials = () => {
   return (
-    <section className=" my-12">
+    <section className=" my-12 w-[97%] mx-auto">
       <div className="grid grid-cols-2 items-center">
         <div>
           <h4 className="text-xl text-primary">Testimonial</h4>

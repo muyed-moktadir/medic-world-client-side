@@ -10,7 +10,7 @@ const ContactUs = () => {
         <div className="card-body">
           <div className=" text-center mb-4">
             <h5 className="text-primary text-center">Conatct Us</h5>
-            <h1 className="text-white text-2xl text-center">hello From the world</h1>
+            <h1 className="tex`t-white text-2xl text-center">hello From the world</h1>
           </div>
           <div className="form-control">
             <input
