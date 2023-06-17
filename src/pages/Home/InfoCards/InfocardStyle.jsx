@@ -49,7 +49,7 @@ export const cardData = [
 // eslint-disable-next-line react/prop-types
 export const CustomButton = ({ children }) => {
   return (
-    <button className="btn bg-gradient-to-r from-[#0FCFEC] to-[#19D3AE] rounded-2xl border-none shadow-md text-black">
+    <button className="btn bg-gradient-to-r from-[#0FCFEC] to-[#19D3AE] rounded-2xl border-none shadow-md text-black capitalize">
       {children}
     </button>
   );

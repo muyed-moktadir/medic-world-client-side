@@ -14,11 +14,6 @@ const Appointment = () => {
       setSelectedDate={setSelectedDate}
       />
       <AvailableAppointments selectedDate={selectedDate}/>
-      <div>
-        {
-          
-        }
-      </div>
     </div>
   )
 }
