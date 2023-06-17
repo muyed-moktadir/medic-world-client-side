@@ -14,7 +14,7 @@ const Banner = () => {
           className="w-[100%] md:w-1/2 shrink-0 rounded-lg shadow-2xl"
           alt=""
         />
-        <div className="mx-4">
+        <div className="mx-4 text-justify">
           <h1 className="text-5xl font-bold">Box Office News!</h1>
           <p className="py-6">
             Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda

@@ -16,7 +16,7 @@ const Service = ({ service }) => {
           className="rounded-xl h-auto"
         />
       </figure>
-      <div className="card-body items-center text-center">
+      <div className="card-body items-center text-justify">
         <h2 className="card-title">{name}</h2>
         <p>{description}</p>
       </div>

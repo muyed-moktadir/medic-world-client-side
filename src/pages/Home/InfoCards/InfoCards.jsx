@@ -9,9 +9,9 @@ import { cardData } from "./InfocardStyle";
 
 const InfoCards = () => {
   return (
-    <div className=" w-[97%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mt-8">
-      {cardData.map((card) => {
-        return <InfoCard key={card.id} card={card} />;
+    <div className=" w-[97%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-8">
+      {cardData.map((card, index) => {
+        return <InfoCard key={card.id} card={card} index={index}/>;
       })}
     </div>
   );

@@ -40,6 +40,7 @@ export const cardData = [
     icon: marker,
     bgClass: " bg-gradient-to-r from-[#0FCFEC] to-[#19D3AE]",
   },
+  
 ];
 
 

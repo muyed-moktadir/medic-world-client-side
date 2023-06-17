@@ -7,6 +7,7 @@ import Exceptional from "./Exceptional/Exceptional";
 import MakeAppointment from "../MakeAppointment/MakeAppointment";
 import Testimonials from "../Testimonial/Testimonials";
 import ContactUs from "../Conntact Us/ContactUs";
+import TestimonialDemo from "../Testimonial/TestimonialDemo";
 
 
 
@@ -21,6 +22,7 @@ export const Home = () => {
       <MakeAppointment/>
       <Testimonials/>
       <ContactUs/>
+      <TestimonialDemo/>
     </div>
   );
 };

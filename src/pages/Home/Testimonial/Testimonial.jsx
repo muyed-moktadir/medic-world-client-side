@@ -5,7 +5,6 @@ import React from "react";
 const Testimonial = ({ review }) => {
   // eslint-disable-next-line react/prop-types
   const { name, reviews, image, location } = review;
-  console.log(name);
   return (
     <div className="card bg-base-100 shadow-xl">
       <div className="card-body p-10">
