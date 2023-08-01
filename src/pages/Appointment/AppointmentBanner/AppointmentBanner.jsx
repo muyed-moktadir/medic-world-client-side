@@ -4,9 +4,11 @@ import chair from "../../../assets/images/chair.png";
 import { DayPicker } from "react-day-picker";
 import { bgImage } from "../../Home/InfoCards/InfocardStyle";
 
+
+  // TODO: state Lifting up to <Appointment/>
 // eslint-disable-next-line react/prop-types
 const AppointmentBanner = ({ selectedDate, setSelectedDate }) => {
-  // TODO: sate Lifting up to <Appointment/>
+
 
   return (
     <header className="w-[97%] mx-auto" style={bgImage}>
@@ -23,6 +25,7 @@ const AppointmentBanner = ({ selectedDate, setSelectedDate }) => {
               onSelect={setSelectedDate}
             />
           </div>
+          
         </div>
       </div>
     </header>

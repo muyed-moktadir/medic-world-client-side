@@ -1,11 +1,8 @@
-// eslint-disable-next-line no-unused-vars
-import React from "react";
+import React, { useState } from "react";
 
-// eslint-disable-next-line react/prop-types
-const InfoCard = ({ card , index}) => {
- 
-  // eslint-disable-next-line react/prop-types
-  const { name, description, icon, bgClass  } = card;
+const InfoCard = ({ card, index }) => {
+
+  const { name, description, icon, bgClass } = card;
 
 
   const cardMarginValues = [
@@ -13,12 +10,33 @@ const InfoCard = ({ card , index}) => {
     "lg:mb-8",
     "lg:mt-10",
   ];
-  
+
   const cardMargin = cardMarginValues[index % cardMarginValues.length];
   // const cardvalue = cardMarginValues[index] || ''
 
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
+  // const cardStyle = {
+  //   borderRadius: isHovered ? "0" : "20px",
+  // };
+
+
+
   return (
-    <div className={`card md:card-side text-center text-white ${bgClass} ${cardMargin} shadow-xl p-6 `}>
+    <div className={`card md:card-side text-center ${isHovered ? "border-0" : "rounded-lg"
+      } text-white ${bgClass} ${cardMargin} shadow-xl p-6 `}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+
+    >
       <figure>
         <img src={icon} alt="Movie" />
       </figure>

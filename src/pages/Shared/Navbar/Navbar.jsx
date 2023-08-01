@@ -1,32 +1,48 @@
 // eslint-disable-next-line no-unused-vars
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
 
   const menuItems = (
     <React.Fragment>
-      <li className=" ml-2">
+      <li className="ml-2">
         <Link to="/">Home</Link>
       </li>
-      <li className=" ml-2">
+      <li className="ml-2">
         <Link to="/about">About</Link>
       </li>
-      <li className=" ml-2">
+      <li className="ml-2">
         <Link to="/appointment">Appointment</Link>
       </li>
-      <li className=" ml-2">
+      <li className="ml-2">
         <Link to="/reviews">Reviews</Link>
       </li>
-      <li className=" ml-2">
+      <li className="ml-2">
         <Link to="/login">Login</Link>
       </li>
     </React.Fragment>
-
   );
+
+  const [navbarBackground, setNavbarBackground] = useState(false);
+
+  const handleScroll = () => {
+    const scrollPosition = window.scrollY;
+    const navbarBackgroundCondition = scrollPosition > 0.02 * window.innerHeight;
+    setNavbarBackground(navbarBackgroundCondition);
+  };
+
+  useEffect(() => {
+    window.onscroll = handleScroll;
+  }, []);
+
   return (
-    <div className="navbar bg-zinc-300 flex justify-between fixed top-0 z-40">
-      <div className="navbar-start">
+    <div
+      className={`navbar ${
+        navbarBackground ? "bg-zinc-300" : "bg-transparent"
+      } flex justify-between fixed top-0 z-40 ${onmousemove={}}`}
+    >
+      <div className="lg:hidden navber-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
             <svg
@@ -44,6 +60,7 @@ const Navbar = () => {
               />
             </svg>
           </label>
+
           <ul
             tabIndex={0}
             className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
@@ -51,12 +68,16 @@ const Navbar = () => {
             {menuItems}
           </ul>
         </div>
-        <Link to="/" className=" normal-case text-xl">Medic World</Link>
+        <Link to="/" className="normal-case text-xl">
+          Medic World
+        </Link>
       </div>
-      <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal">
-          {menuItems}
-        </ul>
+      <div className="hidden lg:flex w-full justify-evenly">
+        <Link to="/" className="normal-case text-xl">
+          Medic World
+        </Link>
+
+        <ul className="menu menu-horizontal">{menuItems}</ul>
       </div>
     </div>
   );

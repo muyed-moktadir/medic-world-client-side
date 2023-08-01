@@ -3,8 +3,10 @@ import React from "react";
 
 // eslint-disable-next-line react/prop-types
 const Testimonial = ({ review }) => {
+  console.log(review)
   // eslint-disable-next-line react/prop-types
   const { name, reviews, image, location } = review;
+
   return (
     <div className="card bg-base-100 shadow-xl">
       <div className="card-body p-10">
